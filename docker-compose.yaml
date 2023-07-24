@@ -1,14 +1,14 @@
 version: "3.5"
 services:
   server:
-    image: iamtakingiteasy/setorchapids:latest
+    build: .
     restart: always
     volumes:
       - "data-server:/home/user/data"
     ports:
       - "0.0.0.0:27016:27016/udp"
       - "127.0.0.1:5900:5900"
-      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:6080:8080"
 
 volumes:
   data-server:
